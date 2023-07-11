@@ -2,6 +2,7 @@ package com.example.password;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -41,21 +42,25 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
 
     @Override
     public void showWeak() {
-        Toast.makeText(this, "Débil", Toast.LENGTH_SHORT).show();
+        binding.textViewStrength.setBackgroundColor(Color.RED);
+        binding.textViewStrength.setText("Débil");
     }
 
     @Override
     public void showMedium() {
-        Toast.makeText(this, "Medio", Toast.LENGTH_SHORT).show();
+        binding.textViewStrength.setBackgroundColor(Color.YELLOW);
+        binding.textViewStrength.setText("Medio");
     }
 
     @Override
     public void showStrong() {
-        Toast.makeText(this, "Fuerte", Toast.LENGTH_SHORT).show();
+        binding.textViewStrength.setBackgroundColor(Color.GREEN);
+        binding.textViewStrength.setText("Fuerte");
     }
 
     @Override
     public void showError() {
-        Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        binding.textViewStrength.setBackgroundColor(Color.RED);
+        binding.textViewStrength.setText("Error");
     }
 }
