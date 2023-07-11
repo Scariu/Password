@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
     public void showWeak() {
         binding.textViewStrength.setBackgroundColor(Color.RED);
         binding.textViewStrength.setText("Débil");
-        binding.imageViewStrenght.setImageDrawable(imageWeak);
+        binding.imageViewStrength.setImageDrawable(imageWeak);
         binding.buttonEnter.setOnClickListener(v -> {
             Toast.makeText(this, "Su contraseña es insegura", Toast.LENGTH_SHORT).show();
         });
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
     public void showMedium() {
         binding.textViewStrength.setBackgroundColor(Color.YELLOW);
         binding.textViewStrength.setText("Medio");
-        binding.imageViewStrenght.setImageDrawable(imageMedium);
+        binding.imageViewStrength.setImageDrawable(imageMedium);
         binding.buttonEnter.setOnClickListener(v -> {
             Toast.makeText(this, "Su contraseña es medianamente segura", Toast.LENGTH_SHORT).show();
         });
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
     public void showStrong() {
         binding.textViewStrength.setBackgroundColor(Color.GREEN);
         binding.textViewStrength.setText("Fuerte");
-        binding.imageViewStrenght.setImageDrawable(imageStrong);
+        binding.imageViewStrength.setImageDrawable(imageStrong);
         binding.buttonEnter.setOnClickListener(v -> {
             Toast.makeText(this, "Su contraseña es segura", Toast.LENGTH_SHORT).show();
         });
