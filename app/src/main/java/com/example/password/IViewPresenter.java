@@ -8,4 +8,6 @@ public interface IViewPresenter {
 
    public void showStrong();
 
+   public void showError();
+
 }
