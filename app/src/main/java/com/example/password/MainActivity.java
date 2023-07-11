@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
 
         presentador = new Presentador(this);
         binding.textViewTitle.setText("¿Qué tan segura es tu contraseña?");
+
         //Para que se evalue mientras se escribe.
         binding.editTextPass.addTextChangedListener(new TextWatcher() {
             @Override
@@ -44,18 +45,27 @@ public class MainActivity extends AppCompatActivity implements IViewPresenter {
     public void showWeak() {
         binding.textViewStrength.setBackgroundColor(Color.RED);
         binding.textViewStrength.setText("Débil");
+        binding.buttonEnter.setOnClickListener(v -> {
+            Toast.makeText(this, "Su contraseña es insegura", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
     public void showMedium() {
         binding.textViewStrength.setBackgroundColor(Color.YELLOW);
         binding.textViewStrength.setText("Medio");
+        binding.buttonEnter.setOnClickListener(v -> {
+            Toast.makeText(this, "Su contraseña es medianamente segura", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
     public void showStrong() {
         binding.textViewStrength.setBackgroundColor(Color.GREEN);
         binding.textViewStrength.setText("Fuerte");
+        binding.buttonEnter.setOnClickListener(v -> {
+            Toast.makeText(this, "Su contraseña es segura", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
